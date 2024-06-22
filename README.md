@@ -24,7 +24,7 @@ I experimented with 3 different models for training (details in `ml_train.ipynb`
 ### Experiment 3: `data_preprocessing_v3.ipynb`
 - Grouped by `ticket_number`, sorted by `message_created_on`
 - Selected first message from each group
-- Test set accuracy: ~40%
+- Test set accuracy: ~30%
 
 ### Experiment 4: `data_preprocessing_v4.ipynb`
 - Grouped and concatenated all messages per ticket
