@@ -48,7 +48,7 @@ No preprocessing was applied; using raw ticket data:
 - Accuracy: ~40%
 
 ### OpenAI GPT-3.5 Model
-- Accuracy: ~60%
+- Accuracy: ~80%
 
 #### Next Steps:
 - Perform feature engineering
