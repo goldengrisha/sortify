@@ -1,5 +1,3 @@
-import pandas as pd
-
 from transformers import pipeline
 
 # Initialize the text classification pipeline
