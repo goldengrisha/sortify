@@ -28,16 +28,16 @@ I experimented with three different models for training, detailed in `ml_train.i
 
 ### Experiment 2: `data_preprocessing_v2.ipynb`
 - Similar to v1, with additional tag filtering
-- Test set accuracy: ~40%
+- Test set accuracy: ~50%
 
 ### Experiment 3: `data_preprocessing_v3.ipynb`
 - Grouped by `ticket_number`, sorted by `message_created_on`
 - Selected first message from each group
-- Test set accuracy: ~30%
+- Test set accuracy: ~40%
 
 ### Experiment 4: `data_preprocessing_v4.ipynb`
 - Grouped and concatenated all messages per ticket
-- Test set accuracy: ~50%
+- Test set accuracy: ~60%
 
 **Challenges:** Limited dataset size (~1000 entries).
 
@@ -71,7 +71,7 @@ Files: `zero_shot_classification.py`, `few_shots_classification_openai.py`, `few
 Experimented with both preprocessed and raw data.
 
 ### Transfer Learning 
-- Accuracy: ~50%
+- Accuracy: ~60%
 
 #### Next Steps:
 - Optimize hyperparameters

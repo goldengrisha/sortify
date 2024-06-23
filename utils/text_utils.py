@@ -31,8 +31,18 @@ def lemmmatize_text(text: str) -> str:
     return " ".join(sent)
 
 
+def clean_stop_words(text: str) -> str:
+    sent = []
+    stop_words = nlp.Defaults.stop_words
+    for word in text.split():
+        if word not in stop_words:
+            sent.append(word)
+
+    return " ".join(sent)
+
+
 def get_pos_tags(text: str) -> str:
     sent = []
     blob = TextBlob(text)
-    sent = [word for (word, tag) in blob.tags if tag in ("NN", "NNS", "NNP", "NNPS")]
+    sent = [word for (word, tag) in blob.tags if tag in ("NN", "NNS", "NNPS")]
     return " ".join(sent)
