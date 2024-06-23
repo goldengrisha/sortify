@@ -62,7 +62,7 @@ Using raw ticket data without preprocessing:
 #### Next Steps:
 - Perform feature engineering
 - Optimize prompt tuning
-- Consider advanced LLMs like GPT-4 or LAMA
+- Consider advanced LLMs like GPT-4 or LLAMA
 
 Files: `zero_shot_classification.py`, `few_shots_classification_openai.py`, `few_shots_classification_hf.py`
 
