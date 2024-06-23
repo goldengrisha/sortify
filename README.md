@@ -1,14 +1,23 @@
-
 # Sortify
 
-## Instructions
-- Install Poetry: `python3 -m pip install poetry`
-- Install dependencies: `poetry install`
-- Download spaCy model: `python3 -m spacy download en_core_web_sm`
+## Setup Instructions
+
+1. **Install Poetry:**
+   ```sh
+   python3 -m pip install poetry
+   ```
+2. **Install dependencies:**
+   ```sh
+   poetry install
+   ```
+3. **Download spaCy model:**
+   ```sh
+   python3 -m spacy download en_core_web_sm
+   ```
 
 ## 1. Standard ML Approach with SpaCy, Scikit-learn, and Pandas
 
-I experimented with 3 different models for training (details in `ml_train.ipynb`):
+I experimented with three different models for training, detailed in `ml_train.ipynb`:
 
 ### Experiment 1: `data_preprocessing_v1.ipynb`
 - Data cleaning
@@ -42,7 +51,7 @@ I experimented with 3 different models for training (details in `ml_train.ipynb`
 
 ## 2. LLM Approach with Hugging Face
 
-No preprocessing was applied; using raw ticket data:
+Using raw ticket data without preprocessing:
 
 ### Hugging Face Models
 - Accuracy: ~40%
@@ -57,32 +66,32 @@ No preprocessing was applied; using raw ticket data:
 
 Files: `zero_shot_classification.py`, `few_shots_classification_openai.py`, `few_shots_classification_hf.py`
 
-## 3. NN approach
+## 3. Neural Network Approach
 
-Tried with preprocessed and raw data.
+Experimented with both preprocessed and raw data.
 
-### Transfer learning 
+### Transfer Learning 
 - Accuracy: ~50%
 
 #### Next Steps:
 - Optimize hyperparameters
-- The size after preprocessing is too small for deep learning (now we have~1000 entries)
-- Maybe something off with data
+- Address the small dataset size (currently ~1000 entries)
+- Investigate potential data issues
 
 Files: `nn_classification.ipynb`
 
 ## Summary
 
-To address the challenge of sorting tickets with various complexities such as different languages, missing values, and overlapping high-frequency words, we can consider both machine learning (ML) and large language model (LLM) approaches.
+The classes are somewhat imbalanced, particularly the "Spam" category, which has significantly fewer entries compared to the other classes. This imbalance can affect the classifier's performance.
 
-#### Data Challenges
+### Data Challenges
 
-Using Python for fast text analysis, I identified that several models could potentially be used for ticket sorting. However, the dataset presents several challenges:
+Using Python for fast text analysis, I identified several challenges with the dataset:
 - **Multilingual Data:** The dataset contains tickets in different languages.
 - **Missing Values:** Some tickets have incomplete information.
-- **High-Frequency Words:** There are words that appear frequently across different categories, causing overlap.
+- **High-Frequency Words:** Common words appear frequently across different categories, causing overlap.
 
-#### Decision Factors
+### Decision Factors
 
 - **Budget:** The LLM approach might be more cost-effective if the translation cost in the ML approach is high.
 - **Data Size:** For a larger dataset, the LLM approach could be more scalable and require less preprocessing.
