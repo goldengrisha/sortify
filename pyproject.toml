@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "sortify"
+version = "0.1.0"
+description = ""
+authors = ["Gregory <goldengrisha@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.2"
+scikit-learn = "^1.5.0"
+spacy = "^3.7.5"
+numpy = "1.26.4"
+textblob = "^0.18.0.post0"
+nltk = "^3.8.1"
+transformers = "^4.41.2"
+torch = "^2.3.1"
+tqdm = "^4.66.4"
+ipywidgets = "^8.1.3"
+openai = "^1.35.3"
+sentencepiece = "^0.2.0"
+torchtext = "^0.18.0"
+torchdata = "^0.7.1"
+wordcloud = "^1.9.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
